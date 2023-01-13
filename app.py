@@ -1,4 +1,6 @@
 from email.message import EmailMessage
+import ssl
+import smtplib
 
 email_sender = '{my email}'
 email_password = '{my password}'
@@ -11,3 +13,4 @@ email_msg = EmailMessage()
 email_msg['From'] = email_sender
 email_msg['To'] = email_receiver
 email_msg['subject'] = subject
+email_msg.set_content(body)
